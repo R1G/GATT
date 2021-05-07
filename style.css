@@ -28,6 +28,7 @@ a {
 .nav-bar {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25%;
   font-size: x-large;
   font-weight: bold;
   margin-bottom: 3%;
@@ -35,7 +36,7 @@ a {
 
 .nav-box {
   height: 150%;
-  padding: auto;
+  padding: 25px;
   background-color: #4A1D00;
 }
 
