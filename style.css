@@ -1,5 +1,5 @@
 body, html {
-    height: 100%;
+  height: 100%;
     background-color:#251300;
     color: #fff4e6;
     text-align: center;
@@ -54,21 +54,29 @@ a {
   background-color: #4A1D00;
 }
 
-.about {
+p {
   font-size: 20px;
+  color: lightgray;
+}
+
+.about {
   text-align: justify;
   margin-left: -2%;
-  color: lightgray;
 }
 
 .about b {
   color: white;
 }
 
+.featured-content {
+  height: 700px;
+  margin-top: 2%;
+}
+
 .episodes {
   text-align: left;
   display: grid;
-  grid-template-rows: 85% 25% 25% 25% 25%;
+  grid-template-rows: 65% 65% 15% 15% 15%;
 }
 
 .episode {
@@ -82,7 +90,7 @@ a {
 
 .characters {
   display: grid;
-  grid-template-rows: 27% 27% 27% 27%;
+  grid-template-rows: 22% 22% 22% 22%;
   grid-template-columns: 33.6% 33.6% 33.6%;
   margin-left: -0.5%;
   text-align: left;
@@ -92,10 +100,17 @@ a {
   background-color: #4A1D00;
   margin: 2%;
   padding: 2%;
+  overflow-y:auto;
+}
+.character::-webkit-scrollbar {
+  width: 0px;
+}
+.character p {
+  margin: 2%;
 }
 
 footer {
   bottom: 1%;
   background-color: black;
-  margin-top: 2%;
+  margin-top: 4%;
 }
