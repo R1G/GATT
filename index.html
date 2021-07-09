@@ -2,42 +2,71 @@
 <html>
     <head>
         <title>Welcome to R1G Studios!</title>
-        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <div class="hero-image">
-        </div>
+        <script src="index.js"></script>
+        <!-- bootstrap browser globals -->
+        <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+        <script
+          src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+          crossorigin></script>
+        <script
+          src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+          crossorigin></script>
 
-        <nav>
-            <div class="nav-bar">
-                <div class="nav-box selected"><a href="./index.html">About</a></div>
-                <div class="nav-box"><a href="./episodes.html">Episodes</a></div>
-                <div class="nav-box"><a href="./characters.html">Characters</a></div>
-                <div class="nav-box"><a href="./synopsis.html">Synopsis</a></div>
+        <link
+            rel="stylesheet"
+            href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="custom.css">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">GATT</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="index/html">Home
+                      <span class="visually-hidden">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="episodes.html">Episodes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="characters.html">Characters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="synopsis.html">Synopsis</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
 
-        <div class="logline" onclick=" location.href='synopsis.html' ">
-            <h4>
-                A social media app threatens to launch a civil war when it’s discovered 
-                that criminals use it to siphon funds from the government...
-            </h4>
-        </div>
+          <div class="jumbotron jumbotron-fluid hero-image"></div>
+          
+          <div class="jumbotron">
+            <div class="container">
+              <p class="lead"><h3>A social media app threatens to launch a civil war when it’s discovered that criminals use it to siphon funds from the government...</h3></p>
+            </div>
+          </div>
+
 
         <div class="about">
             <p>GATT is an original 3D animated science fiction series written by Alfonso Vaca and created by Rigved Deshpande.</p>
             <p>GATT is being performed virtually during the pandemic and animated using the Unity game engine. Real time 3D animation is a blazing-fast, exciting new way to create content, and enables a tiny team like ours to tell a huge story. Our voice actors come from all skill levels and together we have been able to pull together an engaging performance while working remotely. GATT is in active development, and there is room for everyone to contribute their talents, try out something new and be a part of this story!</p>    
         </div>
 
-        <div class="featured-content">
-            <iframe 
-                width="100%" height="90%" src="https://www.youtube.com/embed/UUz2ogeB-Tw" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
+        <h2>Featured Content</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UUz2ogeB-Tw" allowfullscreen></iframe>
+          </div>
 
         <div class="workflow">
             <div class="workflow-step">

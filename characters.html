@@ -2,215 +2,291 @@
 <html>
     <head>
         <title>Characters - R1G Studios</title>
-        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <div class="hero-image">
+        <script src="index.js"></script>
+        <!-- bootstrap browser globals -->
+        <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+        <script
+          src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+          crossorigin></script>
+        <script
+          src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+          crossorigin></script>
+
+        <link
+            rel="stylesheet"
+            href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="custom.css">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">GATT</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="episodes.html">Episodes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="characters.html">Characters
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="synopsis.html">Synopsis</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <div class="row row-cols-1 row-cols-md-3">
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('wake')" src="Assets/Bios/wake.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('wake')" id="wake">
+                      <h5 class="card-title">Wake Dust</h5>
+                      <p class="card-text">
+                        The one responsible for the STAR incident as well as the single most hated man in the Hunter community. 
+                        Initially sentenced to death for the murder of Frank Fredericks, Wake accepted a plea deal for life 
+                        imprisonment without parole in exchange for the identities of 11 high threat-level Hunters, the majority 
+                        of which were swiftly apprehended soon afterwards. This act led to the loss of millions in sponsorships 
+                        and the collapse of the GATT industry, effectively ending the Golden Age of Hunting and drawing criticism 
+                        from all sides. Unable to cope with the massive backlash and hostile prison environment, Wake was found 
+                        lying in a pool of blood, having taken his own life only months into his sentence. He went down in history 
+                         a coward and a traitor.
+                        <br><br>
+                        …or at least, that's what the public was told. In reality, Wake never saw the inside of a jail cell. 
+                        Instead, those 11 names landed him a second chance in the form of a new identity and three years of 
+                        witness protection. They sent him to where all things go when Beacon wants them forgotten, Crimson County, 
+                        otherwise known as The Lion’s Junkyard. There, he became a construction worker and a day drinker, losing 
+                        track of the days as the galaxy slowly moved on from the memory of The Cowboy. But now that three years 
+                        have passed and the STAR case has been reopened, it seems as if Wake’s time in the shade has just about 
+                        run out. And some people haven’t forgotten.
+                    </p>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('violet')" src="Assets/Bios/violet.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('violet')" id="violet">
+                      <h5 class="card-title">Violet Beck-Yang</h5>
+                      <p class="card-text">
+                        A young felon seeking The Cowboy after getting caught in the legal whirlwind of the reopened STAR case. 
+                        Coolheaded and intelligent (though lazy), she speaks with dry wit and a calm tenacity. Armed with her 
+                        trusty modified boxcutter, she never fails to make a proud display of her strong (albeit rusty) 
+                        hand-to-hand combat skills gained from time spent serving in Beacon military. At birth, she was diagnosed 
+                        with Sanguineous Terminus, a bone marrow mutation that causes the overproduction of red blood cells, often 
+                        leading to death by internal drowning in patients. Fortunately, she was among the very few whose body was 
+                        compatible with experimental treatment at the time and she lived. Through guided practice, she learned to 
+                        manipulate her blood as a lethal weapon, as well as a means to speed up her body’s natural recovery process 
+                        with a set of techniques now known as Blood Style.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('stanwix')" src="Assets/Bios/stanwix.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('stanwix')" id="stanwix">
+                      <h5 class="card-title">General Machias Stanwix</h5>
+                      <p class="card-text">
+                        A man of the law hellbent on seeing The Cowboy face judgement for his crimes, dead or alive. A former Hunter 
+                        himself, he began his military career after turning himself in for arrest following a failed assassination 
+                        attempt on the young prince of the sovereign planet, Barikai. Knowing that the boy’s status and age would 
+                        constitute a heavier sentence, he offered his services to Beacon. After having his Hunting history revealed 
+                        by Wake during the STAR trial, Stanwix lost the title of General he had worked so hard to achieve to John Adams 
+                        Bayer and was sent to Crimson County to serve the impoverished in an attempt to rehabilitate his image. That was 
+                        the intent, at least. Instead, Stanwix threw himself into work, obsessively compiling evidence towards a case 
+                        against Wake in an attempt to close this case once and for all.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('kavka')" src="Assets/Bios/kavka.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('kavka')" id="kavka">
+                      <h5 class="card-title">Kavka</h5>
+                      <p class="card-text">
+                        The orphan that steals Wake's wallet. A cunning and precocious young girl, her shrill voice and excitable nature 
+                        is seldom seen in her effort to appear tougher, leaking out only when fangirling over old-timey Golden Age Hunters. 
+                        As the child of a human father and Kali mother, she was born with several mutations (tridactylous limbs and 
+                        discolored splotches all over her body, as well as a disfigured left horn) that made her an unpopular adoption 
+                        candidate at the orphanage. Feeling pity for her (and seeing an opportunity to save money on hiring a janitor), 
+                        Emile decided to take her in, letting her stay in the saloon cellar. Holding out hope that her father is alive 
+                        somewhere, she can be found in the Bainbrook City marketplace, pickpocketing the poor in the hopes that she may 
+                        one day save up enough to purchase a one-way trip out of Crimson County.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('gustaf')" src="Assets/Bios/gustaf.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('gustaf')" id="gustaf">
+                      <h5 class="card-title">Gustaf Gunnarson</h5>
+                      <p class="card-text">
+                        The landlord of Rustbelt Ranch, an apartment complex in the tiny strip town of Cladeford. A witty 
+                        and perceptive, yet terribly cowardly man, he speaks with a slight accent and gruff, scratchy 
+                        groans caused by years of cigarettes and gas station dinners. One might think his monthly earnings 
+                        as a business owner would go quite the long way in such an impoverished town, and they’d be correct 
+                        if the majority of it hadn’t gone towards feeding his pornography addiction. Due to his many specific 
+                        (i.e. expensive) fetishes and severe lack of self-control, he quickly found himself in an ocean of debt, 
+                        forcing him to accommodate Crimson County’s more... unsavory potential tenants. That’s how he came 
+                        to know his one and only friend, Violet.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('emile')" src="Assets/Bios/emile.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('emile')" id="emile">
+                      <h5 class="card-title">Emile Caballero</h5>
+                      <p class="card-text">
+                        The owner of Emile’s Saloon & Grill and Violet's ex-boyfriend. Cousin of notorious drug lord going by the name 
+                        of "El Reyayo", Emile is responsible for distribution in Crimson County, keeping competition at bay with his gang, 
+                        La Bestia. An avid gambler, compulsive liar, and habitual cheater, Emile views his saloon as a place to launder 
+                        money and host drug deals and while this is a well known fact (even to local authorities), he remains untouchable. 
+                        This is because he issues loans, having his men serve as his sharks. Operating as a sort of bank in such an 
+                        impoverished environment has positioned him as an invaluable resource to the residents of the County, allowing 
+                        him to fly under the radar.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('twins')" src="Assets/Bios/twins.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('twins')" id="twins">
+                      <h5 class="card-title">Flint & Falke Fredericks</h5>
+                      <p class="card-text">
+                        The twin nephew-in-laws of Frank Fredericks. Given the fact that their uncle (their only known living relative) 
+                        is an intergalactic Pirate on the run, they were placed under the legal guardianship of Frank upon his arrest 
+                        three years before his murder. As per the instructions in his will, they were enrolled in military school. 
+                        Since he didn’t specify as to where, however, Beacon officials took the liberty of dumping them in Crimson County, 
+                        as their very existence qualified as bad publicity. There, the twins began attending Bainbrook Preparatory School 
+                        where they both strived for high marks, but for opposite reasons. While Falke wants nothing to do with Beacon 
+                        (instead studying to get into law school), Flint aims to be placed in a top-tier infantry Division, as while 
+                        they seldom participate during wartime, soldiers in them still earn enough to support a cushy lifestyle.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('frank')" src="Assets/Bios/frank.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('frank')" id="frank">
+                      <h5 class="card-title">Frank Fredericks</h5>
+                      <p class="card-text">
+                        The victim in the STAR case. As the infamous kingpin running the largest network distributing primarily spacedust, 
+                        Frank was arrested for various racketeering and drug charges five years before STAR took place. On the night of the 
+                        crime, he was being held on the luxurious 50th floor of Booker Ace Penitentiary (receiving special treatment due to 
+                        his wealth and connections) when The Cowboy broke into his "cell", setting Frank aflame after a brief conflict. 
+                        Thanks to experimental treatment, he had become one of the first users whose body was able to develop and maintain 
+                        a second Style alongside his first, but since neither were equipped to withstand prolonged exposure to high 
+                        temperature, Frank was killed. Though he doesn't appear to possess any known relatives, he is survived by his 
+                        fiancé, J'Wakka, and twin nephew-in-laws, Flint and Falke.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('batista')" src="Assets/Bios/batista.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('batista')" id="batista">
+                      <h5 class="card-title">Lieutenant Carmen Batista</h5>
+                      <p class="card-text">
+                        The lieutenant on duty during the events of STAR. A highly ambitious, career-driven woman, she 
+                        speaks with a cocky, haughty conviction… so long as she isn’t in the face of authority. This is 
+                        due to her understanding of Beacon’s military hierarchy, an atmosphere that conditioned her over 
+                        years to respectfully submit to a chain of command. Her learned propensity for following orders 
+                        (and making morally bankrupt decisions) granted her the Lieutenant position under newly appointed 
+                        General, Machias Stanwix. Under his rule, she begrudgingly carried out routine tasks in hopes that 
+                        her efforts would eventually be rewarded with recognition and advancement, only to realize that 
+                        he had no intention of sharing the limelight.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('bulbino')" src="Assets/Bios/bulbino.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('bulbino')" id="bulbino">
+                      <h5 class="card-title">Bulbino</h5>
+                      <p class="card-text">
+                        The owner of Azanwood Auto Works. Possessing loose cargo and even looser morals, they speak in deep, 
+                        flat tones with a distinct Southern twang from their time spent growing up in human-dominated slums. 
+                        Having experienced severe poverty firsthand, their life quickly oriented itself around the pursuit 
+                        of money. Seeing others attain riches through GATT, yet unable to fight to save their life, Bulbino 
+                        turned to the comparatively safe lifestyle of a Keeper, transporting and selling contraband. Though 
+                        they do have some skill as a mechanic, their body shop is nothing more than a neat, presentable front. 
+                        Just a means to launder their profits, leaving customers like Gustaf to be viewed by Bulbino as mere 
+                        tools, serving only to stave away suspicion during routine Beacon inspections.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('victorio')" src="Assets/Bios/victorio.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('victorio')" id="victorio">
+                      <h5 class="card-title">Admiral Torrodin</h5>
+                      <p class="card-text">
+                        One of three Admirals in Beacon’s military hierarchy. A peaceful powerhouse of a man, he speaks with a 
+                        calm intellect and an air of effortless authority. As a natural-born leader of men, Victorio seeks the 
+                        best for his many subordinates. This is why it pains him to see General Stanwix wasting time on what he 
+                        considers to be a wild goose chase, rather than working towards getting himself out of Crimson County 
+                        and preparing for imminent wartime. That, and the fact that he’s got a bit of a soft spot for The Cowboy. 
+                        Since that’s his favorite nephew’s favorite Hunter, Victorio played a major role in getting Wake 
+                        pardoned during the STAR trial. In his free time, he practices meditation and studies the art of chakra 
+                        manipulation. Years of breathing exercises have strengthened his already highly destructive Zephyr Style.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4 shadow">
+                <div class="card bg-primary text-white">
+                    <img class="card-img" onclick="RevealBio('king')" src="Assets/Bios/king.png" alt="Card image">
+                    <div class="card-img-overlay" onclick="HideBio('king')" id="king">
+                      <h5 class="card-title">?#@*&%</h5>
+                      <p class="card-text">
+                        An enigmatic figure. The self-proclaimed “King of the Hunters,” he can cause severe bodily harm seemingly 
+                        at the flick of a finger. Though he’s shown a clear lack of regard for human life, his sadistic tendencies 
+                        have kept him patient over the years. Often seen in pajamas or other casual wear, his scruffy face and 
+                        generally unkempt appearance are a result of a self-imposed vagrancy. While he seems to possess intimate 
+                        knowledge about Wake’s life, as well as a desire to assist him (or at the very least, keep him alive), 
+                        he claims that they’ve never met in person. Due to his lack of an online presence, his personal motives 
+                        for this remain unknown.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <nav>
-            <div class="nav-bar">
-                <div class="nav-box"><a href="./index.html">About</a></div>
-                <div class="nav-box"><a href="./episodes.html">Episodes</a></div>
-                <div class="nav-box selected"><a href="./characters.html">Characters</a></div>
-                <div class="nav-box"><a href="./synopsis.html">Synopsis</a></div>
-            </div>
-        </nav>
-
-        <div class="characters">
-            <div class="character" id="wake-bio">
-
-                <h2>Wake Dust</h2>
-                <h4>“The Cowboy”</h4>
-                <img class="character-art" src="Assets/Bios/wake.png"/>
-                <p class="hide">
-                    The one responsible for the STAR incident as well as the single most hated man in the Hunter community. 
-                    Initially sentenced to death for the murder of Frank Fredericks, Wake accepted a plea deal for life 
-                    imprisonment without parole in exchange for the identities of 11 high threat-level Hunters, the majority 
-                    of which were swiftly apprehended soon afterwards. This act led to the loss of millions in sponsorships 
-                    and the collapse of the GATT industry, effectively ending the Golden Age of Hunting and drawing criticism 
-                    from all sides. Unable to cope with the massive backlash and hostile prison environment, Wake was found 
-                    lying in a pool of blood, having taken his own life only months into his sentence. He went down in history 
-                     a coward and a traitor.
-                    <br><br>
-                    …or at least, that's what the public was told. In reality, Wake never saw the inside of a jail cell. 
-                    Instead, those 11 names landed him a second chance in the form of a new identity and three years of 
-                    witness protection. They sent him to where all things go when Beacon wants them forgotten, Crimson County, 
-                    otherwise known as The Lion’s Junkyard. There, he became a construction worker and a day drinker, losing 
-                    track of the days as the galaxy slowly moved on from the memory of The Cowboy. But now that three years 
-                    have passed and the STAR case has been reopened, it seems as if Wake’s time in the shade has just about 
-                    run out. And some people haven’t forgotten.
-                </p>
-            </div>
-
-            <div class="character"  id="violet-bio">
-                <h2>Violet Beck-Yang</h2>
-                <img class="character-art" src="Assets/Bios/violet.png"/>
-                <p>
-                    A young felon seeking The Cowboy after getting caught in the legal whirlwind of the reopened STAR case. 
-                    Coolheaded and intelligent (though lazy), she speaks with dry wit and a calm tenacity. Armed with her 
-                    trusty modified boxcutter, she never fails to make a proud display of her strong (albeit rusty) 
-                    hand-to-hand combat skills gained from time spent serving in Beacon military. At birth, she was diagnosed 
-                    with Sanguineous Terminus, a bone marrow mutation that causes the overproduction of red blood cells, often 
-                    leading to death by internal drowning in patients. Fortunately, she was among the very few whose body was 
-                    compatible with experimental treatment at the time and she lived. Through guided practice, she learned to 
-                    manipulate her blood as a lethal weapon, as well as a means to speed up her body’s natural recovery process 
-                    with a set of techniques now known as Blood Style.
-                </p>
-            </div>
-
-            <div class="character"  id="stanwix-bio">
-                <h2>General Stanwix</h2>
-                <img class="character-art" src="Assets/Bios/stanwix.png"/>
-                <p>
-                    A man of the law hellbent on seeing The Cowboy face judgement for his crimes, dead or alive. A former Hunter 
-                    himself, he began his military career after turning himself in for arrest following a failed assassination 
-                    attempt on the young prince of the sovereign planet, Barikai. Knowing that the boy’s status and age would 
-                    constitute a heavier sentence, he offered his services to Beacon. After having his Hunting history revealed 
-                    by Wake during the STAR trial, Stanwix lost the title of General he had worked so hard to achieve to John 
-                    Adams Bayer and was sent to Crimson County to serve the impoverished in an attempt to rehabilitate his image. 
-                    That was the intent, at least. Instead, Stanwix threw himself into work, obsessively compiling evidence 
-                    towards a case against Wake in an attempt to close this case once and for all.
-                </p>
-            </div>
-
-            <div class="character" id="kavka-bio">
-                <h2>Kavka</h2>
-                <img class="character-art" src="Assets/Bios/kavka.png"/>
-                <p>
-                    The orphan that steals Wake's wallet. A cunning and precocious young girl, her shrill voice and excitable nature 
-                    is seldom seen in her effort to appear tougher, leaking out only when fangirling over old-timey Golden Age Hunters. 
-                    As the child of a human father and Kali mother, she was born with several mutations (tridactylous limbs and 
-                    discolored splotches all over her body, as well as a disfigured left horn) that made her an unpopular adoption 
-                    candidate at the orphanage. Feeling pity for her (and seeing an opportunity to save money on hiring a janitor), 
-                    Emile decided to take her in, letting her stay in the saloon cellar. Holding out hope that her father is alive 
-                    somewhere, she can be found in the Bainbrook City marketplace, pickpocketing the poor in the hopes that she may 
-                    one day save up enough to purchase a one-way trip out of Crimson County.
-                </p>
-            </div>
-
-            <div class="character" id="gustaf-bio">
-                <h2>Gustaf Gunnarsson</h2>
-                <img class="character-art" src="Assets/Bios/gustaf.png"/>
-                <p>
-                    The landlord of Rustbelt Ranch, an apartment complex in the tiny strip town of Cladeford. A witty 
-                    and perceptive, yet terribly cowardly man, he speaks with a slight accent and gruff, scratchy 
-                    groans caused by years of cigarettes and gas station dinners. One might think his monthly earnings 
-                    as a business owner would go quite the long way in such an impoverished town, and they’d be correct 
-                    if the majority of it hadn’t gone towards feeding his pornography addiction. Due to his many specific 
-                    (i.e. expensive) fetishes and severe lack of self-control, he quickly found himself in an ocean of debt, 
-                    forcing him to accommodate Crimson County’s more... unsavory potential tenants. That’s how he came 
-                    to know his one and only friend, Violet.
-                </p>
-            </div>
-
-            <div class="character" id="emile-bio">
-                <h2>Emile Caballero</h2>
-                <img class="character-art" src="Assets/Bios/emile.png"/>
-                <p>
-                    The owner of Emile’s Saloon & Grill and Violet's ex-boyfriend. Cousin of notorious drug lord going by the name 
-                    of "El Reyayo", Emile is responsible for distribution in Crimson County, keeping competition at bay with his gang, 
-                    La Bestia. An avid gambler, compulsive liar, and habitual cheater, Emile views his saloon as a place to launder 
-                    money and host drug deals and while this is a well known fact (even to local authorities), he remains untouchable. 
-                    This is because he issues loans, having his men serve as his sharks. Operating as a sort of bank in such an 
-                    impoverished environment has positioned him as an invaluable resource to the residents of the County, allowing 
-                    him to fly under the radar.
-                </p>
-            </div>
-
-            <div class="character" id="twins-bio">
-                <h2>Flint & Falke Fredericks</h2>
-                <p>
-                    The twin nephew-in-laws of Frank Fredericks. Given the fact that their uncle (their only known living relative) 
-                    is an intergalactic Pirate on the run, they were placed under the legal guardianship of Frank upon his arrest 
-                    three years before his murder. As per the instructions in his will, they were enrolled in military school. 
-                    Since he didn’t specify as to where, however, Beacon officials took the liberty of dumping them in Crimson County, 
-                    as their very existence qualified as bad publicity. There, the twins began attending Bainbrook Preparatory School 
-                    where they both strived for high marks, but for opposite reasons. While Falke wants nothing to do with Beacon 
-                    (instead studying to get into law school), Flint aims to be placed in a top-tier infantry Division, as while 
-                    they seldom participate during wartime, soldiers in them still earn enough to support a cushy lifestyle.
-                </p>
-            </div>
-
-            <div class="character" id="frank-bio">
-                <h2>Frank Fredericks</h2>
-                <h4>"The Fellow"</h4>
-                <p>
-                    The victim in the STAR case. As the infamous kingpin running the largest network distributing primarily spacedust, 
-                    Frank was arrested for various racketeering and drug charges five years before STAR took place. On the night of the 
-                    crime, he was being held on the luxurious 50th floor of Booker Ace Penitentiary (receiving special treatment due to 
-                    his wealth and connections) when The Cowboy broke into his "cell", setting Frank aflame after a brief conflict. 
-                    Thanks to experimental treatment, he had become one of the first users whose body was able to develop and maintain 
-                    a second Style alongside his first, but since neither were equipped to withstand prolonged exposure to high 
-                    temperature, Frank was killed. Though he doesn't appear to possess any known relatives, he is survived by his 
-                    fiancé, J'Wakka, and twin nephew-in-laws, Flint and Falke.
-                </p>
-            </div>
-
-            <div class="character" id="batista-bio">
-                <h2>Lieutenant Batista</h2>
-                <img class="character-art" src="Assets/Bios/batista.png"/>
-                <p>
-                    The lieutenant on duty during the events of STAR. A highly ambitious, career-driven woman, she 
-                    speaks with a cocky, haughty conviction… so long as she isn’t in the face of authority. This is 
-                    due to her understanding of Beacon’s military hierarchy, an atmosphere that conditioned her over 
-                    years to respectfully submit to a chain of command. Her learned propensity for following orders 
-                    (and making morally bankrupt decisions) granted her the Lieutenant position under newly appointed 
-                    General, Machias Stanwix. Under his rule, she begrudgingly carried out routine tasks in hopes that 
-                    her efforts would eventually be rewarded with recognition and advancement, only to realize that 
-                    he had no intention of sharing the limelight.
-                </p>
-            </div>
-
-            <div class="character" id="bulbino-bio">
-                <h2>Bulbino</h2>
-                <img class="character-art" src="Assets/Bios/bulbino.png"/>
-                <p>
-                    The owner of Azanwood Auto Works. Possessing loose cargo and even looser morals, they speak in deep, 
-                    flat tones with a distinct Southern twang from their time spent growing up in human-dominated slums. 
-                    Having experienced severe poverty firsthand, their life quickly oriented itself around the pursuit 
-                    of money. Seeing others attain riches through GATT, yet unable to fight to save their life, Bulbino 
-                    turned to the comparatively safe lifestyle of a Keeper, transporting and selling contraband. Though 
-                    they do have some skill as a mechanic, their body shop is nothing more than a neat, presentable front. 
-                    Just a means to launder their profits, leaving customers like Gustaf to be viewed by Bulbino as mere 
-                    tools, serving only to stave away suspicion during routine Beacon inspections.
-                </p>
-            </div>
-
-            <div class="character" id="victorio-bio">
-                <h2>Admiral Torrodin</h2>
-                <h4>“Victorio”</h4>
-                <img class="character-art" src="Assets/Bios/victorio.png"/>
-                <p>
-                    One of three Admirals in Beacon’s military hierarchy. A peaceful powerhouse of a man, he speaks with a 
-                    calm intellect and an air of effortless authority. As a natural-born leader of men, Victorio seeks the 
-                    best for his many subordinates. This is why it pains him to see General Stanwix wasting time on what he 
-                    considers to be a wild goose chase, rather than working towards getting himself out of Crimson County 
-                    and preparing for imminent wartime. That, and the fact that he’s got a bit of a soft spot for The Cowboy. 
-                    Since that’s his favorite nephew’s favorite Hunter, Victorio played a major role in getting Wake 
-                    pardoned during the STAR trial. In his free time, he practices meditation and studies the art of chakra 
-                    manipulation. Years of breathing exercises have strengthened his already highly destructive Zephyr Style.
-                </p>
-            </div>
-
-            <div class="character" id="king-bio">
-                <h2>?#@*&%</h2>
-                <h4>“King”</h4>
-                <img class="character-art" src="Assets/Bios/king.png"/>
-                <p>
-                    An enigmatic figure. The self-proclaimed “King of the Hunters,” he can cause severe bodily harm seemingly 
-                    at the flick of a finger. Though he’s shown a clear lack of regard for human life, his sadistic tendencies 
-                    have kept him patient over the years. Often seen in pajamas or other casual wear, his scruffy face and 
-                    generally unkempt appearance are a result of a self-imposed vagrancy. While he seems to possess intimate 
-                    knowledge about Wake’s life, as well as a desire to assist him (or at the very least, keep him alive), 
-                    he claims that they’ve never met in person. Due to his lack of an online presence, his personal motives 
-                    for this remain unknown.
-                </p>
-            </div>
-
-        </div>
-
         
     </body>
 </html>

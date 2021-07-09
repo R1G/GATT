@@ -6,24 +6,57 @@
     </head>
 
     <body>
-        <div class="hero-image">
-        </div>
+        <script src="index.js"></script>
+        <!-- bootstrap browser globals -->
+        <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+        <script
+          src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+          crossorigin></script>
+        <script
+          src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+          crossorigin></script>
 
-        <nav>
-            <div class="nav-bar">
-                <div class="nav-box"><a href="./index.html">About</a></div>
-                <div class="nav-box"><a href="./episodes.html">Episodes</a></div>
-                <div class="nav-box"><a href="./characters.html">Characters</a></div>
-                <div class="nav-box selected"><a href="./synopsis.html">Synopsis</a></div>
+        <link
+            rel="stylesheet"
+            href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="custom.css">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">GATT</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="episodes.html">Episodes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="characters.html">Characters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="synopsis.html">Synopsis
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
 
-        <div class="logline">
-            <h4>
-                A social media app threatens to launch a civil war when it’s discovered 
-                that criminals use it to siphon funds from the government.
-            </h4>
-        </div>
+        <div class="jumbotron hero-image"></div>
+
+        <div class="jumbotron">
+            <div class="container">
+              <p class="lead"><h3>A social media app threatens to launch a civil war when it’s discovered that criminals use it to siphon funds from the government...</h3></p>
+            </div>
+          </div>
 
         <div class="about">
             <p>This app, the <b>Galactic Ansible Transmissions Terminal (GATT)</b>, was designed to allow for efficient, near-instantaneous communication between star systems during wartime. However, an intentional flaw coded in by one of its developers left the program vulnerable to cyber-criminals. While most used this opportunity to launder money with offplanet bank accounts, one user took it upon himself to repurpose GATT’s source code into the social media platform it is today. At launch, it was a massive hit, almost immediately usurping the most popular platform at the time, <b>SpeakEZ</b>. And this popularity carried into its first few years, leading to online discourse regarding secret features hidden in the app’s code.</p>

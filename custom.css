@@ -1,0 +1,57 @@
+html, body {
+  padding: 5px;
+}
+
+.hero-image {
+  background-image: url('Assets/banner.png');
+  background-size: cover;
+  height: 600px;
+  max-width: 2000px;
+  margin: auto;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  min-height: 800px;
+  margin: auto;
+}
+
+.character-art {
+  width: 50%;
+}
+
+.card {
+  
+}
+
+.card-img-overlay {
+  display: none;
+  color: white;
+  background-color:rgba(0, 0, 0, 0.75);
+  overflow-y: scroll;
+}
+
+.card-text {
+  font-size: large;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4f4f4f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
