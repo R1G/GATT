@@ -15,8 +15,10 @@ html, body {
 
 iframe {
   display: block;
+  aspect-ratio: 16 / 9;
   width: 100%;
   margin: auto;
+
 }
 
 .character-art {
