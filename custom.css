@@ -55,3 +55,8 @@ iframe {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.navbar-brand img {
+  height: 30px;
+  margin-left: -15px;
+}
