@@ -2,32 +2,25 @@ html, body {
   padding: 5px;
 }
 
-.navbar {
-  font-size: x-large;
-  height: 100px;
-}
-
 .hero-image {
   background-image: url('Assets/banner.png');
   background-size: cover;
-  height: 600px;
-  max-width: 2000px;
+  aspect-ratio: 16 / 9;
   margin: auto;
+}
+
+.navbar {
+  font-size: x-small;
 }
 
 iframe {
   display: block;
   width: 100%;
-  min-height: 800px;
   margin: auto;
 }
 
 .character-art {
   width: 50%;
-}
-
-.card {
-  
 }
 
 .card-img-overlay {
