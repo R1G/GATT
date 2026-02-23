@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATT — A 3D Animated Science Fiction Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0f;
+            color: #e0e0e8;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            max-height: 480px;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 480px;
+            display: block;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 48px 24px 32px;
+        }
+
+        header img.logo {
+            height: 72px;
+            margin-bottom: 16px;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #8888a0;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        /* Main content */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Sections */
+        section {
+            padding: 48px 0;
+            border-top: 1px solid #18182a;
+        }
+
+        h2 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #6080a8;
+            margin-bottom: 6px;
+        }
+
+        .section-desc {
+            color: #6a6a80;
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+        }
+
+        /* Pilot video — responsive 16:9 */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #0e0e1a;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Shorts grid — 4 vertical clips side by side */
+        .shorts-grid {
+            display: flex;
+            gap: 14px;
+        }
+
+        .short-item {
+            flex: 1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #0e0e1a;
+            aspect-ratio: 9 / 16;
+        }
+
+        .short-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Show bible text */
+        .show-bible {
+            color: #b0b0c4;
+            font-size: 1rem;
+            max-width: 720px;
+        }
+
+        .show-bible p {
+            margin-bottom: 1em;
+        }
+
+        .placeholder {
+            color: #303048;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #18182a;
+            text-align: center;
+            padding: 32px 24px;
+            color: #30304a;
+            font-size: 0.85rem;
+            margin-top: 48px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <img src="assets/gatt_banner.png" alt="GATT">
+    </div>
+
+    <header>
+        <img class="logo" src="assets/logo.png" alt="GATT">
+        <p>A 3D animated science fiction series created by Rigved Deshpande and written by Alfonso Vaca.</p>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>Pilot Episode</h2>
+            <p class="section-desc">The 36-minute pilot episode, produced in Unity Engine in 2022.</p>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/psK-yVmJQms"
+                    title="GATT — Pilot Episode"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Switch to Unreal</h2>
+            <p class="section-desc">Remastering Episode 1 in Unreal Engine, and laying the groundwork for Episodes 2 and 3.</p>
+            <div class="shorts-grid">
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/40pv5ePOfxM"
+                        title="GATT — Short 1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/4XCBkHysTIA"
+                        title="GATT — Short 2"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/iO6_-A9ppt8"
+                        title="GATT — Short 3"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/u6m8kUqwQ5o"
+                        title="GATT — Short 4"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>About the Series</h2>
+            <div class="show-bible">
+                <p class="placeholder">Show bible coming soon.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2025 GATT. All rights reserved.
+    </footer>
+
+</body>
+</html>
