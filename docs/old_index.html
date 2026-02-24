@@ -51,61 +51,6 @@
             margin: 0 auto;
         }
 
-        /* Collapsible show bible */
-        .bible-toggle {
-            max-width: 580px;
-            margin: 24px auto 0;
-            text-align: left;
-        }
-
-        .bible-toggle summary {
-            list-style: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #6080a8;
-            padding: 6px 0;
-            user-select: none;
-        }
-
-        .bible-toggle summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .bible-toggle summary::after {
-            content: '▾';
-            font-size: 0.9rem;
-            transition: transform 0.2s ease;
-            display: inline-block;
-        }
-
-        .bible-toggle[open] summary::after {
-            transform: rotate(-180deg);
-        }
-
-        .bible-toggle summary:hover {
-            color: #7ab8d4;
-        }
-
-        .bible-content {
-            margin-top: 20px;
-            color: #b0b0c4;
-            font-size: 1rem;
-        }
-
-        .bible-content p {
-            margin-bottom: 1em;
-        }
-
-        .bible-content p:last-child {
-            margin-bottom: 0;
-        }
-
         /* Main content */
         .container {
             max-width: 960px;
@@ -185,6 +130,11 @@
             margin-bottom: 1em;
         }
 
+        .placeholder {
+            color: #303048;
+            font-style: italic;
+        }
+
         a {
             color: #7ab8d4;
             text-decoration: none;
@@ -257,22 +207,19 @@
 
     <header>
         <img class="logo" src="assets/logo.png" alt="GATT">
-        <p>GATT is a 3D animated space western sci-fi that takes the tone and atmosphere of Marvel's <em>Guardians of the Galaxy</em> and combines it with the structure and themes of Shonen Jump's <em>One Piece</em>. It follows a crew of superhuman bounty hunters hopping from planet to planet in their escape as fugitives under the law, all while liberating those they encounter from the clutches of oppression in whatever form it manifests.</p>
-        <details class="bible-toggle">
-            <summary>About the Series</summary>
-            <div class="bible-content">
-                <p><em>A social media app threatens to launch a civil war when it's discovered that criminals use it to siphon funds from the government…</em></p>
-                <p>As an entry in the space western genre, GATT blends the chaotic lawlessness of an economy steeped in the bounty system with the sense of discovery granted by the final frontier of space, set amidst the backdrop of escalating civil war tensions. This burgeoning powder keg, spurred on by organized space pirates (forced to live on the outskirts of society) and groups of marginalized citizens (grappling with the inherent distrust of a technocratic, authoritarian regime ruling over vast portions of the known galaxy), becomes the perfect catalyst for human drama to emerge, exploring themes of generational trauma, individualism in the face of suppression, and a greater sense of community: the idea that people need one another, even in an environment that rewards constantly looking over one's shoulder.</p>
-                <p>The potential for this kind of narrative to inspire real world change and a wider discussion of contemporary issues is the overall goal and purpose of this project.</p>
-            </div>
-        </details>
+        <p>GATT is a 3D animated space western sci-fi that takes the tone and atmosphere of Marvel's *Guardians of the Galaxy* and combines it with the structure and themes of Shonen Jump's One Piece. It follows a crew of superhuman bounty hunters hopping from planet to planet in their escape as fugitives under the law, all while liberating those they encounter from the clutches of oppression in whatever form it manifests.</p>
+        <p>A social media app threatens to launch a civil war when it's discovered that criminals use it to siphon funds from the government…</p>
+        <p>As an entry in the space western genre, GATT blends the chaotic lawlessness of an economy steeped in the bounty system with the sense of discovery granted by the final frontier of space, set amidst the backdrop of escalating civil war tensions. This burgeoning powder keg, spurred on by organized space pirates (forced to live on the outskirts of society) and groups of marginalized citizens (grappling with the inherent distrust of a technocratic, authoritarian regime ruling over vast portions of the known galaxy), becomes the perfect catalyst for human drama to emerge, exploring themes of generational trauma, individualism in the face of suppression, and a greater sense of community: the idea that people need one another, even in an environment that rewards constantly looking over one's shoulder.</p>
+        <p>The potential for this kind of narrative to inspire real world change and a wider discussion of contemporary issues is the overall goal and purpose of this project.</p>
     </header>
 
     <div class="container">
 
         <section>
             <h2>Pilot Episode</h2>
-            <p class="section-desc">In 2022 we released a 36-minute pilot episode created in Unity Engine. We are currently remastering this episode and laying the groundwork for future episodes in Unreal Engine 5 because we believe the engine offers more robust tools for real-time film-makers such as ourselves.</p>
+            <p class="section-desc">
+                In 2022 we release a 36-minute pilot episode created in Unity Engine. 
+            </p>
             <div class="video-wrapper">
                 <iframe
                     src="https://www.youtube.com/embed/psK-yVmJQms"
@@ -284,8 +231,11 @@
         </section>
 
         <section>
-            <h2>Switch to Unreal</h2>
-            <p class="section-desc">We are currently remastering our pilot episode and laying the groundwork for future episodes in Unreal Engine 5 because we believe the engine offers more robust tools for real-time film-makers such as ourselves.</p>
+            <h2>Switch To Unreal</h2>
+            <p>
+                We are currently remastering our pilot episode and laying the groundwork for future episodes in Unreal Engine 5 
+                because we believe the engine offers more robust tools for real-time film-makers such as ourselves. 
+            </p>
             <div class="shorts-grid">
                 <div class="short-item">
                     <iframe src="https://www.youtube.com/embed/40pv5ePOfxM"
@@ -315,12 +265,15 @@
         </section>
 
         <section>
-            <h2>About the Team</h2>
-            <div class="show-bible">
-                <p>The team is led by <a href="https://rigved.info">Rigved Deshpande</a>, a former Blizzard technical artist with experience shipping AAA titles. My creative partner, Alfonso, is the only writer on the project, and his near decade of experience with professional screenwriting software has allowed for seamless coordination between us and our team of over 10 voice actors and musicians. This has allowed us to foster an environment for effective collaboration, despite working remotely during the pandemic.</p>
-                <p>We premiered Episode 1 with a live viewing in virtual reality on the <a href="https://www.spatial.io/s/R1G-Studios-HQ-631e09e1af75330001796352?share=4751098232479200507">Spatial</a> platform. Over the course of the evening 60+ people tuned in on their phones, PCs and VR headsets, making ours the most popular space that night.</p>
-                <p>We will give back to the community by releasing the 3D assets we create during production for free. We have a small selection available already on <a href="https://sketchfab.com/R1GStudios">SketchFab</a>.</p>
-            </div>
+            <h2>About The Team</h2>
+            <p class="section-desc">
+                The team is led by <a href="https://rigved.info">Rigved Deshpande</a>, a former Blizzard technical artist with experience shipping AAA titles. His creative partner, 
+                Alfonso Vaca, is the only writer on the project, and his near decade of experience with professional screenwriting software has allowed for seamless coordination between us and our 
+                team of over 10 voice actors and musicians. This has allowed us to foster an environment for effective collaboration, despite working remotely during the pandemic. 
+                We premiered Episode 1 with a live viewing in virtual reality on the Spatial platform. Over the course of the evening 60+ people tuned in on their phones, PCs and VR headsets, 
+                making ours the most popular space that night. We will give back to the community by releasing the 3D assets we create during production for free. We have a small selection available 
+                already on SketchFab.
+            </p>
         </section>
 
         <section>
@@ -351,6 +304,28 @@
             </div>
         </section>
 
+        <section>
+            <h2>About the Project</h2>
+            <div class="show-bible">
+                <p>Our project is GATT, a 3D real-time animated series produced in Unreal Engine. We are seeking funding to create the first three episodes, ~30 mins in length each.</p>
+                <p>We don't typically qualify for funding or awards in traditional industry events, since they prefer stand-alone animated shorts or interactive experiences. 
+                    Most animated series these days meant for older audiences are rendered in 2D. That said, we believe this project could showcase what a powerful choice Unreal Engine is for creating 3D animated series.</p>
+                <p>The team is led by <a href="https://rigved.info">Rigved Deshpande</a>, a former Blizzard technical artist with experience shipping AAA titles. My creative partner, Alfonso, 
+                    is the only writer on the project, and his near decade of experience with professional screenwriting software has allowed for seamless coordination between us and our team of over 
+                    10 voice actors and musicians. This has allowed us to foster an environment for effective collaboration, despite working remotely during the pandemic.</p>
+                <p>
+                    We are moving from Unity to Unreal. We produced a 36-minute pilot episode in Unity 2021 and feel Unreal offers more to indie real-time film-makers such as ourselves.
+                </p>
+                <p>
+                    Our category is Film, TV, and Live Events. We premiered Episode 1 with a live viewing in virtual reality on the <a href="https://www.spatial.io/s/R1G-Studios-HQ-631e09e1af75330001796352?share=4751098232479200507">Spatial</a> platform. 
+                    Over the course of the evening, 60+ people tuned in on their phones, PCs and VR headsets, making ours the most popular space that night.
+                </p>
+                <p>
+                    We are committed to giving back to the community by releasing the 3D assets we create during production for free. 
+                    A small selection is already available on <a href="https://sketchfab.com/R1GStudios">SketchFab</a>, with more to follow as production continues.
+                </p>
+            </div>
+        </section>
     </div>
 
     <footer>
