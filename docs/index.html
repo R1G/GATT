@@ -490,6 +490,99 @@
             transform: none;
         }
 
+        /* ─── TIMELINE TABLE ────────────────────────────── */
+        .timeline-intro {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #9090b0;
+            max-width: 720px;
+            margin-bottom: 36px;
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .timeline-table th {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(111,179,211,0.3);
+            background: var(--card);
+        }
+
+        .timeline-table th:not(:last-child) {
+            border-right: 1px solid var(--border);
+        }
+
+        .timeline-table td {
+            padding: 18px 20px;
+            vertical-align: top;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-table td:not(:last-child) {
+            border-right: 1px solid var(--border);
+        }
+
+        .timeline-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .timeline-table {
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .timeline-note {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .timeline-cell-heading {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+
+        .timeline-cell-heading:first-child {
+            margin-top: 0;
+        }
+
+        .timeline-cell-body {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #7070a0;
+        }
+
+        .timeline-release {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: #9090b0;
+            max-width: 720px;
+        }
+
         /* ─── RESPONSIVE ────────────────────────────────── */
         @media (max-width: 700px) {
             .shorts-grid {
@@ -669,6 +762,52 @@
                 </div>
 
             </div>
+        </section>
+
+        <!-- ─── TIMELINE & PRODUCTION ───────────────────── -->
+        <section class="section reveal">
+            <div class="section-header">
+                <div class="eyebrow" style="justify-content: flex-start;">Production</div>
+                <h2 class="section-title">Timeline &amp; Production</h2>
+            </div>
+            <p class="timeline-intro">Unreal offers the exciting opportunity to work with gaming technology while following a film industry-standard triphasic production timeline.</p>
+            <table class="timeline-table">
+                <thead>
+                    <tr>
+                        <th>Pre-Production</th>
+                        <th>Production</th>
+                        <th>Post-Production</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="timeline-cell-heading">Storyboard</p>
+                            <p class="timeline-cell-body">Instead of a conventional 2D storyboard, we use primitive geometry and basic camera placement in Unreal itself to make a 3D storyboard. A 3D storyboard enables us to "walk" the virtual space and come up with interesting angles and compositions, as well as make adjustments based on any feedback received. Furthermore, creating a 3D storyboard already completes most of the layout work needed later on when assembling the scene.</p>
+                            <p class="timeline-cell-heading">Character Assets</p>
+                            <p class="timeline-cell-body">We have already created our core cast of characters; however every episode introduces side characters which entails designing a new Metahuman, outfit asset and groom.</p>
+                            <p class="timeline-cell-heading">Environment Assets</p>
+                            <p class="timeline-cell-body">We start with a KitBash and adapt it to the world of GATT by adding on sci-fi elements. Any environment assets we cannot source via online marketplaces we generate using multi-modal 3D AI models such as Microsoft's Trellis. This is an advantageous and time-effective approach since the majority of environment assets don't need to be rigged or deformed.</p>
+                            <p class="timeline-cell-heading">Layout</p>
+                            <p class="timeline-cell-body">Once all character and environment assets for an episode have been prepared, we create Level Sequences which place each asset in the correct location along with some rudimentary placeholder animations to indicate how they will move and perform in each scene. Playing back these sequences results in a 3D animatic which dictates how production stage animation will be implemented.</p>
+                        </td>
+                        <td>
+                            <p class="timeline-cell-heading">Motion Capture</p>
+                            <p class="timeline-cell-body">A final animation list is obtained from the pre-production animatic and then performed through our motion capture workflow, which is then refined and retargeted within Unreal Engine to deliver the final animation.</p>
+                            <p class="timeline-cell-heading">Voice Acting</p>
+                            <p class="timeline-cell-body">We schedule virtual acting sessions over Zoom with our team of voice actors, using both their recorded audio performances as well as passing their video feed through the Live Link plugin in Unreal to transfer their facial movements to our Metahuman characters.</p>
+                        </td>
+                        <td>
+                            <p class="timeline-cell-heading">Editing</p>
+                            <p class="timeline-cell-body">The final cut for each episode is made in Blender using some open-source video compositing plugins. Each sequence from Unreal is rendered out as a frame sequence and stitched together in Blender.</p>
+                            <p class="timeline-cell-heading">Soundtracks</p>
+                            <p class="timeline-cell-body">The music for each episode of GATT is produced externally by the musicians we partner with and layered with great care and intention in Blender to create our desired space western atmosphere.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="timeline-note">Combined production time for each episode: 4 months</p>
+            <p class="timeline-release">We will release the remastered pilot episode of GATT in June 2026, with episodes 2 and 3 following thereafter in October 2026 and February 2027. The first narrative arc of GATT is told completely within the first 5 episodes, and the first season will contain 10 episodes in total.</p>
         </section>
 
     </div>
