@@ -183,7 +183,7 @@
 
         .eyebrow {
             font-family: 'Rajdhani', sans-serif;
-            font-size: 0.7rem;
+            font-size: 1rem;
             font-weight: 700;
             letter-spacing: 0.25em;
             text-transform: uppercase;
@@ -358,6 +358,100 @@
             display: block;
         }
 
+        /* ─── LATEST RELEASE CAROUSEL ──────────────────── */
+        .carousel-outer {
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            height: 480px;
+        }
+
+        .carousel-track::-webkit-scrollbar { display: none; }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            border-radius: 3px;
+            overflow: hidden;
+            background: var(--deep);
+            border: 1px solid var(--border);
+            box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(74,127,193,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .carousel-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(74,127,193,0.2);
+        }
+
+        .carousel-item--wide  { width: calc(480px * 16 / 9); }
+        .carousel-item--short { width: calc(480px * 9 / 16); }
+
+        .carousel-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .carousel-btn {
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(74,127,193,0.15);
+            border-color: var(--glow);
+        }
+
+        /* ─── FEATURE LIST ─────────────────────────────── */
+        .feature-list {
+            list-style: none;
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .feature-list li {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .feature-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--glow);
+        }
+
         /* ─── TEAM ─────────────────────────────────────── */
         .team-text {
             font-family: 'Crimson Pro', serif;
@@ -453,6 +547,31 @@
             height: 1px;
             background: linear-gradient(to right, transparent, var(--border), transparent);
             margin: 0;
+        }
+
+        /* ─── SOCIAL ────────────────────────────────────── */
+        .social-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 64px 32px;
+        }
+
+        .social-link {
+            display: flex;
+            color: var(--text-secondary);
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        .social-link:hover {
+            color: var(--glow);
+            transform: translateY(-3px);
+        }
+
+        .social-link svg {
+            width: 36px;
+            height: 36px;
         }
 
         /* ─── FOOTER ────────────────────────────────────── */
@@ -614,13 +733,7 @@
         <div class="hero-content">
             <img class="hero-logo" src="assets/logo.png" alt="GATT">
             <div class="hero-tagline">GATT</div>
-            <p class="hero-sub">A 3D Animated Space Western.</p>
-            <a href="#synopsis" class="hero-scroll">
-                Discover the Series
-                <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
-                    <path d="M6 1v10M1 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
+            <p class="hero-sub">A 3D Animated Series</p>
         </div>
     </section>
 
@@ -629,36 +742,84 @@
         <div class="synopsis-inner reveal">
             <div class="eyebrow">The Series</div>
             <p class="synopsis-text">
-                GATT is a 3D animated space western sci-fi that takes the tone and atmosphere of Marvel's  <em>Guardians of the Galaxy</em> and combines it
+                GATT is a 3D animated space western sci-fi that takes the tone and atmosphere of Marvel's <em>Guardians of the Galaxy</em> and pairs it
                 with the structure and themes of Shonen Jump's <em>One Piece</em>. It follows a crew of superhuman bounty hunters hopping from planet to planet 
                 in their escape as fugitives under the law, all while liberating those they encounter from the clutches of oppression in whatever form it manifests.
             </p>
-            <details class="bible-toggle">
-                <summary>
-                    About the Series
-                    <svg class="bible-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </summary>
-                <div class="bible-content">
-                    <p><em>A social media app threatens to launch a civil war when it's discovered that criminals use it to siphon funds from the government…</em></p>
-                    <p>As an entry in the space western genre, GATT blends the chaotic lawlessness of an economy steeped in the bounty system with the sense of discovery granted by the final frontier of space, set amidst the backdrop of escalating civil war tensions.</p>
-                    <p>This burgeoning powder keg, spurred on by organized space pirates (forced to live on the outskirts of society) and groups of marginalized citizens (grappling with the inherent distrust of a technocratic, authoritarian regime ruling over vast portions of the known galaxy), becomes the perfect catalyst for human drama to emerge, exploring themes of generational trauma, individualism in the face of suppression, and a greater sense of community: the idea that people need one another, even in an environment that rewards constantly looking over one's shoulder.</p>
-                    <p>The potential for this kind of narrative to inspire real world change and a wider discussion of contemporary issues is the overall goal and purpose of this project.</p>
+        </div>
+    </section>
+
+    <!-- ─── LATEST RELEASE ─────────────────────────────────── -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow" style="justify-content: flex-start;">Latest Release</div>
+                <h2 class="section-title">HIGHLIGHTED WORKS</h2>
+            </div>
+            <div class="carousel-outer">
+                <div class="carousel-track" id="latestCarousel">
+                    <div class="carousel-item carousel-item--wide">
+                        <iframe src="https://www.youtube.com/embed/x_BrmSDhqLE" title="GATT — Latest Release" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item carousel-item--short">
+                        <iframe src="https://www.youtube.com/embed/rE9BGov2etQ" title="GATT Short 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item carousel-item--short">
+                        <iframe src="https://www.youtube.com/embed/6Yu1HMQNKOI" title="GATT Short 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item carousel-item--short">
+                        <iframe src="https://www.youtube.com/embed/40pv5ePOfxM" title="GATT Short 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item carousel-item--short">
+                        <iframe src="https://www.youtube.com/embed/4XCBkHysTIA" title="GATT Short 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item carousel-item--short">
+                        <iframe src="https://www.youtube.com/embed/iO6_-A9ppt8" title="GATT Short 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item carousel-item--short">
+                        <iframe src="https://www.youtube.com/embed/u6m8kUqwQ5o" title="GATT Short 6" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
-            </details>
+                <div class="carousel-nav">
+                    <button class="carousel-btn" aria-label="Scroll left" onclick="
+                        var t=document.getElementById('latestCarousel');
+                        var item=t.querySelector('.carousel-item');
+                        t.scrollBy({left:-item.offsetWidth-16,behavior:'smooth'});">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="carousel-btn" aria-label="Scroll right" onclick="
+                        var t=document.getElementById('latestCarousel');
+                        var item=t.querySelector('.carousel-item');
+                        t.scrollBy({left:item.offsetWidth+16,behavior:'smooth'});">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow" style="justify-content: flex-start;">About the Series</div>
+                <h2 class="section-title">Synopsis</h2>
+            </div>
+            <div class="team-text">
+                <p>As an entry in the space western genre, GATT blends the chaotic lawlessness of an economy steeped in the bounty system with the sense of discovery granted by the final frontier of space, set amidst the backdrop of escalating civil war tensions.</p>
+                <p>This burgeoning powder keg, spurred on by organized space pirates (forced to live on the outskirts of society) and groups of marginalized citizens (grappling with the inherent distrust of a technocratic, authoritarian regime ruling over vast portions of the known galaxy), becomes the perfect catalyst for human drama to emerge, exploring themes of generational trauma, individualism in the face of suppression, and a greater sense of community: the idea that people need one another, even in an environment that rewards constantly looking over one's shoulder.</p>
+                <p>The potential for this kind of narrative to inspire change and a wider discussion of contemporary issues is the overall goal and purpose of this project. As a studio, we strive towards the greater awareness of Unreal Engine’s potential as a powerful tool for multimedia projects beyond gaming, especially when utilized in tandem with other free resources like Blender and Sketchfab. Through our success, we hope to inspire other young creatives to pursue their artistic inclinations through Unreal Engine 5 by showcasing what can be achieved with little to no budget and a community’s worth of effort.</p>
+            </div>
         </div>
     </section>
 
     <div class="container">
-
         <!-- ─── PILOT EPISODE ───────────────────────────── -->
         <section class="section reveal">
             <div class="section-header">
                 <div class="eyebrow" style="justify-content: flex-start;">The Pilot</div>
                 <h2 class="section-title">Episode One — Star</h2>
-                <p class="section-desc">In 2022 we released a 36-minute pilot episode created in Unity Engine.</p>
             </div>
+            <p class="team-text" style="margin-bottom: 24px;">In 2022 we released a 36-minute pilot episode created in Unity Engine, which we intend to remaster this summer in Unreal Engine 5, as we believe the engine offers far more robust tools for real-time film-making.</p>
             <div class="video-wrapper">
                 <iframe
                     src="https://www.youtube.com/embed/psK-yVmJQms"
@@ -667,70 +828,6 @@
                     allowfullscreen>
                 </iframe>
             </div>
-        </section>
-
-        <!-- ─── SWITCH TO UNREAL ────────────────────────── -->
-        <section class="section reveal">
-            <div class="section-header">
-                <div class="eyebrow" style="justify-content: flex-start;">Unreal Engine 5</div>
-                <h2 class="section-title">Remaster &amp; Beyond</h2>
-                <p class="section-desc">We are currently remastering our pilot episode and laying the groundwork for future episodes in Unreal Engine 5 because we believe the engine offers more robust tools for real-time film-makers such as ourselves. </p>
-            </div>
-            <div class="eyebrow" style="justify-content: flex-start; margin-bottom: 16px;">Episode 1 — Star</div>
-            <div class="shorts-grid">
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/40pv5ePOfxM"
-                        title="GATT — Short 1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/4XCBkHysTIA"
-                        title="GATT — Short 2"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/iO6_-A9ppt8"
-                        title="GATT — Short 3"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/u6m8kUqwQ5o"
-                        title="GATT — Short 4"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="eyebrow" style="justify-content: flex-start; margin-top: 36px; margin-bottom: 16px;">Episode 2 — Wound</div>
-            <div class="shorts-grid">
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/6Yu1HMQNKOI"
-                        title="GATT — Short 1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/rE9BGov2etQ"
-                        title="GATT — Short 2"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/gOcDB6fRAhg"
-                        title="GATT — Short 3"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="short-item">
-                    <iframe src="https://www.youtube.com/embed/CpmYjFItjNg"
-                        title="GATT — Short 4"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-            
         </section>
 
         <!-- ─── TEAM ────────────────────────────────────── -->
@@ -836,9 +933,26 @@
                 </tbody>
             </table>
             <p class="timeline-note">Combined production time for each episode: 4 months</p>
-            <p class="timeline-release">We will release the remastered pilot episode of GATT in June 2026, with episodes 2 and 3 following thereafter in October 2026 and February 2027. The first narrative arc of GATT is told completely within the first 5 episodes, and the first season will contain 10 episodes in total.</p>
+            <p class="timeline-release">We will release the remastered pilot episode of GATT in June 2026, with episodes 2 and 3 following thereafter in October 2026 and February 2027. The first narrative arc of GATT is self-contained and told completely within the first 5 episodes, and the first season will contain 11 episodes in total.</p>
         </section>
 
+    </div>
+
+    <!-- ─── SOCIAL ──────────────────────────────────────── -->
+    <div class="social-bar">
+        <a class="social-link" href="https://www.instagram.com/r1gstudios" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+        </a>
+        <a class="social-link" href="https://www.youtube.com/@r1g_studios" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+            </svg>
+        </a>
     </div>
 
     <!-- ─── FOOTER ───────────────────────────────────── -->
